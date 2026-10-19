@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daily Export Program Executive Dashboard</title>
+<meta name="theme-color" content="#1E3A8A">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/logo-192.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <img src="icons/logo-192.png" alt="S T Sultan logo" width="48" height="48">
+  <div>
+    <h1>Daily Export Program Executive Dashboard</h1>
+    <p>Export schedule, transporter allocation and fleet summary</p>
+  </div>
+</header>
+
+<main>
+  <div class="actions">
+    <button id="jpgBtn" type="button">Download JPG</button>
+    <button id="xlsxBtn" type="button" class="ghost">Download Excel</button>
+  </div>
+
+  <div class="canvas-wrap">
+    <canvas id="dashboardCanvas" aria-label="Daily export program dashboard"></canvas>
+  </div>
+
+  <details>
+    <summary>Edit program data</summary>
+    <textarea id="jsonBox" spellcheck="false" aria-label="Program data as JSON"></textarea>
+    <p class="msg" id="editMsg" role="alert"></p>
+    <div class="actions">
+      <button id="applyBtn" type="button">Update dashboard</button>
+      <button id="resetBtn" type="button" class="ghost">Reset to default data</button>
+    </div>
+  </details>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
